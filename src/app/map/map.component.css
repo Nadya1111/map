@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+}
+
+form {
+  height: fit-content;
+  margin: 10px 0 0 0;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: rgb(190, 190, 190);
+  border-style: solid;
+}
+
+.map {
+  margin: 10px;
+  width: 70%;
+  height: 400px;
+}
+
+.map.leaflet-pane {
+  position: relative;
+  width: 100%;
+}
+
+.latLng {
+  display: flex;
+  padding: 10px;
+}
+
+.name {
+  width: 100%;
+  margin-left: 10px;
+}
+
+.container .name #name {
+  width: calc(100% - 30px);
+
+}
+
+.lng {
+  width: 50%;
+  margin-left: 10px;
+}
+
+.lat {
+  width: 50%;
+}
+
+.container .lat #lat {
+  width: calc(100% - 10px);
+}
+
+.container .lng #lng {
+  width: calc(100% - 10px);
+}
+
+button {
+  width: 100%;
+  margin-top: 10px;
+  background: rgba(127, 255, 212, 0.7);
+  border-color: aquamarine;
+  border-radius: 5px;
+}
+
+h3 {
+  margin-left: 10px;
+}

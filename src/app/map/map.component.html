@@ -1,0 +1,33 @@
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="onCreateMarker()">
+    <h3>Маршрут</h3>
+    <div class="name">
+      <label for="name">Название </label><br/>
+      <input required="true" id="name" type="text" formControlName="name">
+    </div>
+    <div class="latLng">
+      <div class="lat">
+        <label for="lat">Широта</label>
+        <input required id="lat" type="text" formControlName="lat">
+      </div>
+      <div class="lng">
+        <label for="lng">Долгота</label>
+        <input required id="lng" type="text" formControlName="lng">
+      </div>
+    </div>
+    <button type="submit">Добавить еще одну точку</button>
+  </form>
+  <div
+    #map
+    class="map"
+    leaflet
+    [leafletOptions]="options"
+    [(leafletCenter)]="centerMap"
+    [leafletLayer]="polyline"
+  >
+    <div *ngIf="markers.length">
+      <div *ngFor="let m of markers" [leafletLayer]="m">
+      </div>
+    </div>
+  </div>
+</div>
